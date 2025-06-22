@@ -31,7 +31,7 @@ with st.sidebar:
                 "Description": description
             }
             st.session_state.expenses.append(new_expense)
-            st.success("Expense Added ✅")
+            st.success("Expense Added")
 
 df = pd.DataFrame(st.session_state.expenses)
 
@@ -47,7 +47,7 @@ if not df.empty:
 
     fig, ax = plt.subplots()
     ax.bar(category_data.index, category_data.values, color='black')
-    ax.set_ylabel("₹ Spent")
+    ax.set_ylabel("Spent")
     ax.set_title("Expense by Category")
     st.pyplot(fig)
 else:
