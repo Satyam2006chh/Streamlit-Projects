@@ -27,4 +27,12 @@ def ask_ai(prompt):
         return f"❌ API Error: {response.text}"  
     
 
+st.set_page_config(page_title="SmartAnalyst- AI DATASET EXPLORER", layout="wide")
+st.title("📊 SmartCSV - AI-Powered Big Dataset Analyze")
+
+uploaded_file = st.file_uploader("📁Upload Your Dataset CSV here 📁" , type=["csv"])
+if uploaded_file:
+    st.success("Your File is successfully Uploaded 📁")
+    
+
 
